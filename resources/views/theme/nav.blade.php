@@ -63,7 +63,7 @@
                     <ul class="nav-search">
                         <li class="search-btn"><a href="#" class="fa fa-search"></a></li>
                         <li class="bar-icon"><a href="#" class="fa fa-list-ul"></a></li>
-                        <li class="user-icon"><a href="login.html" class="fa fa-user"></a></li>
+                        <li class="user-icon"><a href="login.html" class="fa fa-user" data-toggle="modal" data-target="#exampleModal"></a></li>
                         <li class="shopping-cart-icon"><a href="cart.html" class="fa fa-shopping-cart"></a></li>
                     </ul>
                     
@@ -82,10 +82,36 @@
                     </div>
 
 
-                    <div class="Login-btn">
+                    <!-- -------modal-------- -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <!-- <h5 class="modal-title" id="exampleModalLabel">Modal title</h5> -->
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="Login-btn">
+                                            <a href="{{ route('register') }}" class="btn btn-primary" title="register">{{ __('frontstaticword.Signup') }}</a>
+                                            <a href="{{ route('login') }}" class="btn btn-secondary" title="login">{{ __('frontstaticword.Login') }}</a>
+                                        </div> 
+                                    </div>
+                                    <!-- <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+                    <!-- -------modal-------- -->
+
+
+                    <!-- <div class="Login-btn">
                         <a href="{{ route('register') }}" class="btn btn-primary" title="register">{{ __('frontstaticword.Signup') }}</a>
                         <a href="{{ route('login') }}" class="btn btn-secondary" title="login">{{ __('frontstaticword.Login') }}</a>
-                    </div> 
+                    </div>  -->
                 @endguest
 
                 @auth

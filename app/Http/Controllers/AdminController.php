@@ -10,6 +10,8 @@ class AdminController extends Controller
 {
     public function __construct()
     {
+        // set_time_limit(8000000);
+
         return $this->middleware('auth');
     }
     /**

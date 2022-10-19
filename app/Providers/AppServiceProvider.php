@@ -31,6 +31,8 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         try {
+            set_time_limit(8000000);
+
             \DB::connection()->getPdo();
             Schema::defaultStringLength(191);
             view()->composer('*',function($view){
