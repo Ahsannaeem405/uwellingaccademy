@@ -73,6 +73,22 @@ if ('serviceWorker' in navigator) {
         });
   });
 }
+
+	/*========== Add Class active To navigation search Form  ==========*/
+	$(" .nav-search .search-btn a").on("click", function (e) {
+		e.preventDefault();
+		$(".navigation-form").toggleClass("active");
+	});
+
+	/*========== Add Class active To side menu  ==========*/
+	$(".nav-search .bar-icon a").on("click", function (e) {
+		e.preventDefault();
+		$(".side-menu").addClass("open");
+    });
+	$(".side-menu .side-menu-close").on("click", function (e) {
+		e.preventDefault();
+		$(".side-menu").removeClass("open");
+    });
 </script>
 
 @yield('custom-script')

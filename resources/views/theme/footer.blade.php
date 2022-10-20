@@ -20,7 +20,7 @@
                                 @endif
                             </li>
 
-                            <li>{{ $cpy_txt }}</li>
+                            <li>State, Country</li>
                             <li>{{ $cpy_txt }}</li>
                         </ul>
                     </div>

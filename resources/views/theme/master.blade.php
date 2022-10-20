@@ -45,6 +45,9 @@ $rtl = array('ar','he','ur', 'arc', 'az', 'dv', 'ku'); //make a list of rtl lang
 <!-- top-nav bar start-->
 @include('theme.nav')
 <!-- top-nav bar end-->
+<!-- side bar start-->
+@include('theme.sidebar')
+<!-- side bar end-->
 <!-- home start -->
 @yield('content')
 <!-- testimonial end -->
