@@ -2527,6 +2527,7 @@ color: #f1f3f1;
 .navbar .nav li .dropdown li a:hover {
 	background: #f7f7fb;
 	padding-left: 18px;
+  color: #8e8d8d !important;
 }
 
 .navbar .nav li .dropdown li a:before {
