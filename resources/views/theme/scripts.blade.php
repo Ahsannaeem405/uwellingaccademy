@@ -25,6 +25,10 @@ $rtl = array('ar','he','ur', 'arc', 'az', 'dv', 'ku'); //make a list of rtl lang
 <script src="{{ url('js/protip.js') }}"></script> <!-- protip js -->
 <script src="{{ url('js/select2.min.js') }}"></script> <!-- select2 -->
 <script src="{{ URL::asset('js/pace.min.js') }}"></script>
+<!-- -------------- -->
+<!-- <script src="js/particles.js"></script> -->
+<script src="{{ URL::asset('js/particles.js') }}"></script>
+<script src="{{ URL::asset('js/app-two.js') }}"></script>
 
 @if($gsetting->rightclick=='1')
 	<script>
@@ -89,6 +93,12 @@ if ('serviceWorker' in navigator) {
 		e.preventDefault();
 		$(".side-menu").removeClass("open");
     });
+
+	/*========== Mobile menu  ==========*/
+	$(".menu-toggle").on("click", function (e) {
+		e.preventDefault();
+		$(".nav-bar-main-block").toggleClass("menu-active");
+	});
 </script>
 
 @yield('custom-script')

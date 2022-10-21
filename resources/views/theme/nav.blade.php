@@ -117,7 +117,7 @@
 <section id="nav-bar" class="nav-bar-main-block">
     <div class="container">
         <div class="row">
-            <div class="col-lg-2">
+            <div class="col-lg-2 col-sm-12">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                         <div class="logo">
@@ -131,10 +131,15 @@
                                 <a href="{{ url('/') }}"><b><div class="logotext">{{ str_limit($setting->project_title, $limit=6, $end="") }}</div></b></a>
                             @endif
                         </div>
+                        <button class="menu-toggle">
+							<span class="bar"></span>
+							<span class="bar"></span>
+							<span class="bar"></span>
+						</button>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-10">
+            <div class="col-lg-10 col-sm-12">
                 @guest
                 <div class="navigation-main">
                     <!-- <div class="navigation">
@@ -241,46 +246,16 @@
 
 
                 @auth
-                <div class="row">
+                <div class="">
                     <!-- -------------- -->
-                    <nav class="navbar navbar-expand-lg">
-                        <div class="navbar-collapse">
-                            <ul class="nav navbar-nav">
-                                <li class="active">
-                                    <a href="index.html">HOME</a>
-                                </li>
-                                <li>
-                                    <a href="about-us.html">ABOUT US</a>
-                                </li>
-                                
-                                <li><a href="services.html">SERVICES</a>
-                                </li>
-                                <li><a href="#">COURSES AND COACHING<i class="fa fa-angle-down"></i></a>
-                                    <ul class="dropdown">
-                                        <li><a href="schedule.html">Class Schedule</a></li>
-                                        <li><a href="class-grid.html">Class Grid</a></li>
-                                        <li><a href="class-details.html">Single Class</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="#">CLASSES<i class="fa fa-angle-down"></i></a>
-                                    <ul class="dropdown">
-                                        <li><a href="#">CLASSES List</a></li>
-                                        <li><a href="teacher.html">Teacher Profile</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Blog</a>
-                                </li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-
-
                     <ul class="nav-search nav-search-logged-in">
-                        <li class="search-btn"><a href="#" class="fa fa-search"></a></li>
-                        <li class="bar-icon"><a href="#" class="fa fa-list-ul"></a></li>
-                        <li class="nav-wishlist">
+                        <li class="search-btn logged-in-icons">
+                            <a href="#" class="fa fa-search"></a>
+                        </li>
+                        <li class="bar-icon logged-in-icons">
+                            <a href="#" class="fa fa-list-ul"></a>
+                        </li>
+                        <li class="nav-wishlist logged-in-icons">
                             <ul id="nav">
                                 <li id="notification_li">
                                     <a href="{{ url('send') }}" id="notificationLink" title="Notification"><i class="fa fa-bell"></i></a>
@@ -335,7 +310,7 @@
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-wishlist">
+                        <li class="nav-wishlist logged-in-icons">
                             <a href="{{ route('wishlist.show') }}" title="Go to Wishlist"><i class="fa fa-heart"></i></a>
                             <span class="red-menu-badge red-bg-success">
                                 @php
@@ -351,7 +326,7 @@
                                 @endphp
                             </span>
                         </li>
-                        <li class="shopping-cart">
+                        <li class="shopping-cart logged-in-icons">
                             <a href="{{ route('cart.show') }}" title="Cart"><i class="flaticon-shopping-cart"></i></a>
                             <span class="red-menu-badge red-bg-success">
                                 @php
@@ -367,55 +342,62 @@
                                 @endphp
                             </span>
                         </li>
-                        <li class="my-container">
+                        <li class="2222 my-container logged-in-icons">
                             <div class="dropdown">
-                            <button class="btn btn-default dropdown-toggle  my-dropdown" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                @if(Auth::User()->user_img != null || Auth::User()->user_img !='')
-                                    <img src="{{ url('/images/user_img/'.Auth::User()->user_img) }}" class="circle" alt="user">
-                                @else
-                                    <img src="{{ asset('images/default/user.jpg')}}"  class="circle" alt="user">
-                                @endif
-                                <span class="dropdown__item name" id="name">{{ str_limit(Auth::User()->fname, $limit = 10, $end = '..') }}</span>
-                                <span class="dropdown__item caret"></span>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-right User-Dropdown U-open" aria-labelledby="dropdownMenu1">
-                                <div id="notificationTitle">
-                                    @if(Auth::User()->user_img != null || Auth::User()->user_img !='')
-                                        <img src="{{ url('/images/user_img/'.Auth::User()->user_img) }}" class="dropdown-user-circle" alt="user">
+                                <!-- <span class="user-icon"><a href="#" class="fa fa-user"></a></span> -->
+                                <button class="btn btn-default dropdown-toggle  my-dropdown" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    <!-- @if(Auth::User()->user_img != null || Auth::User()->user_img !='')
+                                        <img src="{{ url('/images/user_img/'.Auth::User()->user_img) }}" class="circle" alt="user">
                                     @else
-                                        <img src="{{ asset('images/default/user.jpg')}}" class="dropdown-user-circle" alt="user">
-                                    @endif
-                                    <div class="user-detailss">
-                                        {{ Auth::User()->fname }}
-                                        <br>
-                                        {{ Auth::User()->email }}
-                                    </div>
-                                    
-                                </div>
-                                @if(Auth::User()->role == "admin" || Auth::User()->role == "instructor"  )
-                                <a target="_blank" href="{{ url('/admins') }}"><li><i class="fa fa-dashboard"></i>{{ __('frontstaticword.AdminDashboard') }}</li></a>
-                                @endif
-                                <a href="{{ route('mycourse.show') }}"><li><i class="fa fa-diamond"></i>{{ __('frontstaticword.MyCourses') }}</li></a>
-                                <a href="{{ route('wishlist.show') }}"><li><i class="fa fa-heart"></i>{{ __('frontstaticword.MyWishlist') }}</li></a>
-                                <a href="{{ route('purchase.show') }}"><li><i class="fa fa-shopping-cart"></i>{{ __('frontstaticword.PurchaseHistory') }}</li></a>
-                                <a href="{{route('profile.show',Auth::User()->id)}}"><li ><i class="fa fa-user"></i>{{ __('frontstaticword.UserProfile') }}</li></a>
-                                @if(Auth::User()->role == "user")
-                                @if($gsetting->instructor_enable == 1)
-                                <a href="#" data-toggle="modal" data-target="#myModalinstructor" title="Become An Instructor"><li><i class="fas fa-chalkboard-teacher"></i>{{ __('frontstaticword.BecomeAnInstructor') }}</li></a>
-                                @endif
-                        
-                                @endif
-
-                                <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    <div id="notificationFooter">
-                                        {{ __('frontstaticword.Logout') }}
+                                        <img src="{{ asset('images/default/user.jpg')}}"  class="circle" alt="user">
+                                    @endif -->
+                                    <!-- <span class="dropdown__item name" id="name">{{ str_limit(Auth::User()->fname, $limit = 10, $end = '..') }}</span> -->
+                                    <span class="user-icon"><a href="#" class="fa fa-user"></a></span>
+                                    <!-- <span class="dropdown__item caret"></span> -->
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-right User-Dropdown U-open" aria-labelledby="dropdownMenu1">
+                                    <div id="notificationTitle" class="text-center">
+                                        <div>
+                                            @if(Auth::User()->user_img != null || Auth::User()->user_img !='')
+                                                <img src="{{ url('/images/user_img/'.Auth::User()->user_img) }}" class="dropdown-user-circle" alt="user">
+                                            @else
+                                                <img src="{{ asset('images/default/user.jpg')}}" class="dropdown-user-circle" alt="user">
+                                            @endif
+                                        </div>
+                                        <div class="user-detailss">
+                                            <span>
+                                                {{ Auth::User()->fname }}
+                                            </span>
+                                            <span>
+                                                {{ Auth::User()->email }}
+                                            </span>
+                                        </div>
                                         
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="display-none">
-                                            @csrf
-                                        </form>
                                     </div>
-                                </a>
-                            </ul>
+                                    @if(Auth::User()->role == "admin" || Auth::User()->role == "instructor"  )
+                                    <a target="_blank" href="{{ url('/admins') }}"><li><i class="fa fa-dashboard"></i>{{ __('frontstaticword.AdminDashboard') }}</li></a>
+                                    @endif
+                                    <a href="{{ route('mycourse.show') }}"><li><i class="fa fa-diamond"></i>{{ __('frontstaticword.MyCourses') }}</li></a>
+                                    <a href="{{ route('wishlist.show') }}"><li><i class="fa fa-heart"></i>{{ __('frontstaticword.MyWishlist') }}</li></a>
+                                    <a href="{{ route('purchase.show') }}"><li><i class="fa fa-shopping-cart"></i>{{ __('frontstaticword.PurchaseHistory') }}</li></a>
+                                    <a href="{{route('profile.show',Auth::User()->id)}}"><li ><i class="fa fa-user"></i>{{ __('frontstaticword.UserProfile') }}</li></a>
+                                    @if(Auth::User()->role == "user")
+                                    @if($gsetting->instructor_enable == 1)
+                                    <a href="#" data-toggle="modal" data-target="#myModalinstructor" title="Become An Instructor"><li><i class="fas fa-chalkboard-teacher"></i>{{ __('frontstaticword.BecomeAnInstructor') }}</li></a>
+                                    @endif
+                            
+                                    @endif
+
+                                    <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                        <div id="notificationFooter">
+                                            {{ __('frontstaticword.Logout') }}
+                                            
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="display-none">
+                                                @csrf
+                                            </form>
+                                        </div>
+                                    </a>
+                                </ul>
                             </div>
                         </li>
                     </ul>
@@ -426,6 +408,39 @@
                         </div>              
                         <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
                     </form>
+
+                    <nav class="navbar navbar-expand-lg">
+                        <div class="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active">
+                                    <a href="index.html">HOME</a>
+                                </li>
+                                <li>
+                                    <a href="about-us.html">ABOUT US</a>
+                                </li>
+                                
+                                <li><a href="services.html">SERVICES</a>
+                                </li>
+                                <li><a href="#">COURSES AND COACHING<i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown">
+                                        <li><a href="schedule.html">Class Schedule</a></li>
+                                        <li><a href="class-grid.html">Class Grid</a></li>
+                                        <li><a href="class-details.html">Single Class</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">CLASSES<i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">CLASSES List</a></li>
+                                        <li><a href="teacher.html">Teacher Profile</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Blog</a>
+                                </li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </nav>
                     <!-- -------------- -->
                     <div class="col-lg-12 d-none justify-content-center logged-in">
                         <div class="learning-business learning-business-two">
@@ -525,7 +540,7 @@
                                 @endphp
                             </span>
                         </div>
-                        <div class="my-container">
+                        <div class="111 my-container">
                             <div class="dropdown">
                             <button class="btn btn-default dropdown-toggle  my-dropdown" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 @if(Auth::User()->user_img != null || Auth::User()->user_img !='')
