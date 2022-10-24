@@ -38,14 +38,14 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
                 <div class="home-content display-table">
                     <div class="display-table-cell">
                         <h2 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.5s">Welcome to </br>Uwelling Accademy</h2>
-                        <h4 class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="1s">
-                            <p>PROVA TUTTI I MERAVIGLIOSI SERVIZI E SCEGLI TRA</p>
-                                <h6>	
-                                    <p>CORSI</p>
-                                    <p>COACHING</p>
-                                    <p>CLASSI</p>
-                                </h6>
-                        </h4>
+                        <div class="wow fadeInLeft">
+                            <p data-wow-duration="1.5s" data-wow-delay="1s">PROVA TUTTI I MERAVIGLIOSI SERVIZI E SCEGLI TRA</p>
+                                <div>	
+                                    <p data-wow-duration="1.5s" data-wow-delay="1s">CORSI</p>
+                                    <p data-wow-duration="1.5s" data-wow-delay="1s">COACHING</p>
+                                    <p data-wow-duration="1.5s" data-wow-delay="1s">CLASSI</p>
+                                </div>
+                        </div>
                         <p class="wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="1.5s">UWELLING ACCADEMY NASCE DAL DESIRERIO DI OFFRIRE SERVIZI UNICI PER CREARE MENTI E CORPI PIU CONSAPEVOLI DEL PROPRIO BENESSERE</p>
                         <div class="my-btn wow fadeInUp" data-wow-duration="1.5s" data-wow-delay="2s">
                             <a href="about-us.html" class="main-btn"><span>Learn More</span></a>
@@ -576,7 +576,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
                     <div class="col-lg-4 col-md-6">
                         <div class="member">
                             <div class="member-img">
-                                <img src="images/custom/1.jpg" class="img-fluid" alt="">
+                                <img src="images/custom/12.jpg" class="img-fluid" alt="">
 								<div class="overlay">
 									<div class="social-media text-center">
 										<a href="#"><i class="fa fa-facebook"></i></a>
@@ -595,7 +595,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
                     <div class="col-lg-4 col-md-6">
                         <div class="member">
                             <div class="member-img">
-                                <img src="images/custom/2.jpeg" class="img-fluid" alt="">
+                                <img src="images/custom/22.jpeg" class="img-fluid" alt="">
 								<div class="overlay">
 									<div class="social-media text-center">
 										<a href="#"><i class="fa fa-facebook"></i></a>
@@ -638,7 +638,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
 		
 		<!-- ========== Start Pricing ========== -->
         
-        <!-- <section class="pricing" id="pricing">
+        <section class="pricing" id="pricing">
             <div class="container">
 				<div class="main-title text-center">
 					<span class="separator">
@@ -709,7 +709,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         
         <!-- ========== End Pricing ========== -->
         
@@ -765,7 +765,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
 						<div class="testimonial-box">
 							<div class="client-info">
 								<div class="client-pic">
-									<img src="images/custom/3.jpg" alt="client">
+									<img src="images/custom/3.jpeg" alt="client">
 								</div>
 								<div class="client-details">
 									<h6>Silvia Hatmun</h6>
@@ -812,7 +812,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
         
         <!-- ========== Start Contact ========== -->
         
-        <!-- <section class="contact" id="contact">
+        <section class="contact" id="contact">
             <div class="container">
 				<div class="main-title text-center">
 					<span class="separator">
@@ -850,13 +850,13 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
         
         <!-- ========== End Contact ========== -->
         
         <!-- ========== Start Newsletter ========== -->
 		
-		<!-- <section class="newsletter">
+		<section class="newsletter">
 			<div class="container">
 				<div class="newsletter-inner">
 					<div class="row">
@@ -875,9 +875,10 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
 					</div>
 				</div>
 			</div>
-		</section> -->
+		</section>
 		
         <!-- ========== End Newsletter ========== -->
+
 <!-- custom design -->
 <!-- custom design -->
 
@@ -909,6 +910,25 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
             }
         });
     }
+
+
+
+	$('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1
+        }
+    }
+});
 </script>
 
 @endsection

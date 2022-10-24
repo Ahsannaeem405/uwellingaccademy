@@ -191,31 +191,31 @@
                         <div class="navbar-collapse">
                             <ul class="nav navbar-nav">
                                 <li class="active">
-                                    <a href="index.html">HOME</a>
+                                    <a href="#">HOME</a>
                                 </li>
                                 <li>
-                                    <a href="about-us.html">ABOUT US</a>
+                                    <a href="#">ABOUT US</a>
                                 </li>
                                 
-                                <li><a href="services.html">SERVICES</a>
+                                <li><a href="#">SERVICES</a>
                                 </li>
                                 <li><a href="#">COURSES AND COACHING<i class="fa fa-angle-down"></i></a>
                                     <ul class="dropdown">
-                                        <li><a href="schedule.html">Class Schedule</a></li>
-                                        <li><a href="class-grid.html">Class Grid</a></li>
-                                        <li><a href="class-details.html">Single Class</a></li>
+                                        <li><a href="#">Class Schedule</a></li>
+                                        <li><a href="#">Class Grid</a></li>
+                                        <li><a href="#">Single Class</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">CLASSES<i class="fa fa-angle-down"></i></a>
                                     <ul class="dropdown">
                                         <li><a href="#">CLASSES List</a></li>
-                                        <li><a href="teacher.html">Teacher Profile</a></li>
+                                        <li><a href="#">Teacher Profile</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="#">Blog</a>
                                 </li>
-                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><a href="#">Contact Us</a></li>
                             </ul>
                         </div>
                     </nav>

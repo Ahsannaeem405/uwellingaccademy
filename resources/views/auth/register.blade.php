@@ -4,8 +4,10 @@
 
 <!-- end head -->
 <!-- body start-->
-<body>
-<section id="nav-bar" class="nav-bar-main-block nav-bar-main-block-one">
+<body class="oucimin-auth">
+@include('theme.nav')
+@include('theme.sidebar')
+<!-- <section id="nav-bar" class="nav-bar-main-block nav-bar-main-block-one">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4">
@@ -34,11 +36,12 @@
         </div>
     </div>
     <hr>
-</section>
+</section> -->
+
 <section id="signup" class="signup-block-main-block">
     <div class="container">
         <div class="col-lg-6 col-md-8 offset-md-3">
-            <div class="signup-heading">
+            <div class="signup-heading text-center">
                {{ __('frontstaticword.StartLearning') }}!
             </div>
 
@@ -125,6 +128,7 @@
 
 
 @include('theme.scripts')
+@include('theme.footer')
 <!-- end jquery -->
 </body>
 <!-- body end -->

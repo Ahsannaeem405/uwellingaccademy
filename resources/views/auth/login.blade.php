@@ -5,9 +5,9 @@
 
 <!-- end head -->
 <!-- body start-->
-<body>
+<body class="oucimin-auth">
 <!-- top-nav bar start-->
-<section id="nav-bar" class="nav-bar-main-block nav-bar-main-block-one">
+<!-- <section id="nav-bar" class="nav-bar-main-block nav-bar-main-block-one">
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-4">
@@ -36,14 +36,16 @@
         </div>
     </div>
     <hr>
-</section>
+</section> -->
+@include('theme.nav')
+@include('theme.sidebar')
 
 <!-- top-nav bar end-->
 <!-- Signup start-->
 <section id="signup" class="signup-block-main-block">
     <div class="container">
         <div class="col-md-6 offset-md-3">
-            <div class="signup-heading">
+            <div class="signup-heading text-center">
                 {{ __('frontstaticword.LogIntoYour') }} {{ $project_title }} {{ __('frontstaticword.Account') }}!
             </div>
 
@@ -130,6 +132,7 @@
 <!--  Signup end-->
 <!-- jquery -->
 @include('theme.scripts')
+@include('theme.footer')
 <!-- end jquery -->
 </body>
 <!-- body end -->

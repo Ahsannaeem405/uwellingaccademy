@@ -157,6 +157,13 @@
             </div>
         </div>
     </div>
+     <!-- ========== Start Scroll To Top  ========== -->
+        
+     <a href="#" class="scroll-top">
+        <span><i class="fa fa-arrow-up"></i></span>
+    </a>
+    
+    <!-- ========== End Scroll To Top  ========== -->
 </footer>
 
 @include('instructormodel')

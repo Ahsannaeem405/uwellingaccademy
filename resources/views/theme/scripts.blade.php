@@ -26,9 +26,12 @@ $rtl = array('ar','he','ur', 'arc', 'az', 'dv', 'ku'); //make a list of rtl lang
 <script src="{{ url('js/select2.min.js') }}"></script> <!-- select2 -->
 <script src="{{ URL::asset('js/pace.min.js') }}"></script>
 <!-- -------------- -->
-<!-- <script src="js/particles.js"></script> -->
 <script src="{{ URL::asset('js/particles.js') }}"></script>
 <script src="{{ URL::asset('js/app-two.js') }}"></script>
+
+<!-- --------------- -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<!-- --------------- -->
 
 @if($gsetting->rightclick=='1')
 	<script>
@@ -98,6 +101,41 @@ if ('serviceWorker' in navigator) {
 	$(".menu-toggle").on("click", function (e) {
 		e.preventDefault();
 		$(".nav-bar-main-block").toggleClass("menu-active");
+	});
+
+	/*========== About Progress  ==========*/
+    progressCheck = false;
+	function aboutPogress() {
+        $(".progress-container").each(function () {
+            var progressBar = $(this).find(".progress-bar");
+            progressBar.css("width", progressBar.attr("aria-valuenow") + "%");
+        });
+    }
+    
+    if (!progressCheck && $(this).scrollTop() >= $(".about-us").offset().top - 255) {
+        aboutPogress();
+        progressCheck = true;
+    }
+    
+    win.on("scroll", function () {
+        
+        if (!progressCheck && $(this).scrollTop() >= $(".about-us").offset().top - 255) {
+            aboutPogress();
+            progressCheck = true;
+        }
+        
+    });
+	/*========== Schedule  ==========*/
+	$(".class-schedule .filter-menu .list-filter li").on("click", function () {
+		$(this).addClass("active").siblings("li").removeClass("active");
+		/*---- Timetable ----*/
+		$(".class-schedule .timetable .all").addClass("animated fadeOut").removeClass("fadeIn");
+		$(".class-schedule .timetable " + $(this).data('filter')).addClass("animated fadeIn").removeClass("fadeOut");
+		/*---- Timetable Small ----*/
+		$(".class-schedule .timetable-small .all").parent().parent().fadeOut();
+		$(".class-schedule .timetable-small " + $(this).data('filter')).parent().parent().fadeIn();
+		$(".class-schedule .timetable-small .all").fadeOut();
+		$(".class-schedule .timetable-small " + $(this).data('filter')).fadeIn(); 
 	});
 </script>
 
