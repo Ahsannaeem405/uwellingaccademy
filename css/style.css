@@ -807,6 +807,532 @@ position: relative;
 
 
 /* custom home page */
+
+/* --------------------------------------
+   6. Inner Pages
+-----------------------------------------*/
+.page-title {
+	position: relative;
+  background: url("../images/header.jpg") center center no-repeat;
+	background-size: cover;
+	padding: 150px 0;
+	text-align: center;
+}
+
+.page-title:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* background: rgba(0, 0, 0, .75); */
+  background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
+	z-index: 0;
+}
+
+.page-title .container {
+	position: relative;
+	z-index: 2;
+}
+
+.page-title .content h2 {
+    color: #fff;
+	font-size: 53px;
+    font-weight: 600;
+    line-height: 1.3;
+	text-transform: capitalize;
+    margin-bottom: 35px;
+}
+
+.page-title .content ul li {
+    position: relative;
+    display: inline-block;
+    margin-right: 10px;
+    padding-right: 15px;
+    font-size: 17px;
+    text-transform: capitalize;
+    letter-spacing: .5px;
+}
+
+.page-title .content ul li:last-child {
+    color: #eee;
+    padding-right: 0;
+    margin-right: 0;
+}
+
+.page-title .content ul li:first-child:after,
+.page-title .content ul li.two:after {
+    content: "\f101";
+    font-family: "FontAwesome";
+    position: absolute;
+    right: -5px;
+    top: 1px;
+    font-size: 14px;
+    font-weight: 800;
+    color: #eee;
+}
+
+.page-title .content ul li a {
+    color: #fff;
+}
+
+.area {
+    background-color: #fff;
+}
+
+/* --------------------------------------
+   Class Grid
+-----------------------------------------*/
+
+.classes {
+  padding-top: 100px;
+  padding-bottom: 70px;
+background: #fff;
+}
+
+.classes .class {
+background-color: #f7f6f6;
+  border: 1px solid #e8e5f5;
+  border-radius: 4px;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, .05);
+margin-bottom: 30px;
+}
+
+.classes .class-img img {
+display: block;
+max-width: 100%;
+height: auto;
+}
+
+.classes .class .class-content {
+  padding: 20px 0;
+position: relative;
+}
+
+.classes .class .class-content .class-title h4 {
+  color: #3e3e3e;
+  letter-spacing: .5px;
+  margin-bottom: 5px;
+  font-weight: 600;
+padding: 0 20px;
+}
+
+.classes .class .class-content:hover .class-title h4 {
+  color: #7b6cd5;
+}
+
+.classes .class .class-content .details {
+padding: 0 20px;
+  margin-bottom: 10px;
+}
+
+.classes .class .class-content .details li {
+display: inline-block;
+font-size: 14px;
+color: #999;
+margin-right: 8px;
+}
+
+.classes .class .class-content .details li i {
+display: inline-block;
+color: #7b6cd5;
+margin-right: 6px;
+}
+
+.classes .class .class-content .class-text p {
+  line-height: 1.8;
+  font-weight: 400;
+  padding: 0 20px;
+  margin-bottom: 0;
+  color: #888;
+  font-size: 15px;
+}
+
+.classes .class .class-content .class-info {
+  margin-bottom: 0;
+  padding: 15px 20px 0;
+overflow: hidden;
+}
+
+.classes .class .class-content .class-info li {
+  display: inline-block;
+  color: #888;
+letter-spacing: .3px;
+font-weight: 500;
+font-size: 15px;
+line-height: 1;
+}
+
+.classes .class .class-content .class-info li .post-more {
+  color: #7b6cd5;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.classes .class .class-content .class-info li .post-more i {
+  margin-left: 4px;
+}
+
+/* --------------------------------------
+ Class Details
+-----------------------------------------*/
+
+.classes .class .class-content .class-footer {
+  padding: 35px 20px;
+}
+
+.classes .class .class-content .class-footer h5 {
+  font-size: 17px;
+  letter-spacing: .5px;
+  text-transform: capitalize;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.classes .class .class-content .class-footer .class-share {
+  margin-bottom: 35px;
+}
+
+.classes .class .class-content .class-footer .class-share ul li {
+  display: inline-block;
+margin-right: 14px;
+}
+
+.classes .class .class-content .class-footer .class-share ul li a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 38px;
+  text-align: center;
+  font-size: 18px;
+  color: #7a6bd4;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid #7b6cd5;
+-webkit-transition: color 0s ease-in-out;
+  -moz-transition: color 0s ease-in-out;
+  -o-transition: color 0s ease-in-out;
+  -ms-transition: color 0s ease-in-out;
+  transition: color 0s ease-in-out;
+}
+
+.classes .class .class-content .class-footer .class-share ul li a:hover {
+color: #fff;
+  background: #7a6bd4;
+  border: 1px solid #7b6cd5;
+-webkit-transition: color 0s ease-in-out;
+  -moz-transition: color 0s ease-in-out;
+  -o-transition: color 0s ease-in-out;
+  -ms-transition: color 0s ease-in-out;
+  transition: color 0s ease-in-out;
+}
+
+.classes .class .class-content .class-footer .class-tags ul li {
+  display: inline-block;
+}
+
+.classes .class .class-content .class-footer .class-tags ul li a {
+  display: inline-block;
+  color: #888;
+  font-size: 15px;
+  letter-spacing: .3px;
+  margin-bottom: 5px;
+  margin-right: 12px;
+}
+
+.classes .class .class-content .class-footer .class-tags ul li a:hover {
+  color: #7b6cd5;
+}
+
+.classes .class .class-content .class-comments {
+padding: 0 20px 25px;
+}
+
+.classes .class .class-content .class-comments h3 {
+font-size: 21px;
+  letter-spacing: .5px;
+  text-transform: capitalize;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.classes .class .class-content .class-comment {
+position: relative;
+margin-bottom: 35px;
+}
+
+.classes .class .class-content .class-comment.reply {
+margin-left: 90px;
+}
+
+.classes .class .class-content .class-comment .comment-image img {
+width: 80px;
+height: 80px;
+border-radius: 50%;
+}
+
+.classes .class .class-content .class-comment h4 {
+font-size: 16px;
+  letter-spacing: .5px;
+  text-transform: capitalize;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.classes .class .class-content .class-comment span {
+display: inline-block;
+  color: #888;
+font-size: 15px;
+  letter-spacing: .5px;
+  margin-bottom: 10px;
+}
+
+.classes .class .class-content .class-comment .reply-btn {
+position: absolute;
+top: 0;
+right: 0;
+font-size: 16px;
+  color: #7b6cd5;
+letter-spacing: .4px;
+}
+
+.classes .class .class-content .class-comment .reply-btn i {
+font-weight: 500;
+  margin-right: 7px;
+}
+
+.classes .class .class-content .class-comment p {
+  font-size: 14px;
+line-height: 1.8;
+  color: #888;
+margin-bottom: 0;
+}
+
+.classes .class .class-content .class-form {
+padding: 0 20px 35px;
+}
+
+.classes .class .class-content .class-form h3 {
+  font-size: 21px;
+  letter-spacing: .5px;
+  text-transform: capitalize;
+  color: #666;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.classes .class .class-content .class-form .form-group {
+  margin-bottom: 25px;
+}
+
+.classes .class .class-content .class-form .form-control,
+.classes .class .class-content .class-form .form-control:focus {
+  color: #666;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  height: 60px;
+  padding: 12px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #bcb4ef;
+}
+
+.classes .class .class-content .class-form textarea.form-control,
+.classes .class .class-content .class-form textarea.form-control:focus {
+  height: 155px;
+  resize: none;
+  padding-top: 18px;
+}
+
+.classes .class-sidebar .sidebar-search {
+  position: relative;
+}
+
+.classes .class-sidebar .sidebar-search .form-group {
+   margin-bottom: 30px;
+}
+
+.classes .class-sidebar .sidebar-search .form-control,
+.classes .class-sidebar .sidebar-search .form-control:focus {
+   color: #666;
+  outline: none;
+box-shadow: none;
+  border-radius: 30px;
+  height: 50px;
+  padding: 12px 45px 12px 30px;
+border: 1px solid #e7e7ea;
+}
+
+.classes .class-sidebar .sidebar-search .search-btn {
+position: absolute;
+  top: 50%;
+  right: 2%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  line-height: 33px;
+  text-align: center;
+border-radius: 50%;
+font-size: 15px;
+background: #7b6cd5;
+  border: 1px solid #7b6cd5;
+  color: #fff;
+cursor: pointer;
+outline: none;
+}
+
+.classes .class-sidebar .sidebar-search .search-btn:hover {
+background: #604dd6;
+  border: 1px solid #604dd6;
+}
+
+.classes .class-sidebar .sidebar-info {
+padding: 35px 20px;
+margin-bottom: 30px;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, .05);
+}
+
+.classes .class-sidebar .sidebar-info h4 {
+font-size: 20px;
+letter-spacing: .3px;
+text-transform: capitalize;
+color: #666;
+font-weight: 600;
+margin-bottom: 25px;
+}
+
+.classes .class-sidebar .sidebar-info .info-list {
+margin-bottom: 0;
+}
+
+.classes .class-sidebar .info-list li {
+display: block;
+color: #888;
+font-size: 15px;
+padding-bottom: 15px;
+margin-bottom: 15px;
+border-bottom: 1px solid #e7e7ea;
+}
+
+.classes .class-sidebar .info-list li:last-of-type {
+padding-bottom: 0;
+margin-bottom: 0;
+border-bottom: none;
+}
+
+.classes .class-sidebar .info-list li span {
+display: inline-block;
+color: #7b6cd5;
+font-weight: 600;
+margin-right: 5px;
+}
+
+.classes .class-sidebar .register {
+margin-bottom: 30px;
+display: block;
+margin-right: 0;
+}
+
+.classes .class-sidebar .sidebar-classes {
+padding: 35px 20px;
+margin-bottom: 30px;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, .05);
+}
+
+.classes .class-sidebar .sidebar-classes h4 {
+font-size: 20px;
+letter-spacing: .3px;
+text-transform: capitalize;
+color: #666;
+font-weight: 600;
+margin-bottom: 25px;
+}
+
+.classes .class-sidebar .sidebar-classes .class-inner {
+position: relative;
+padding-left: 110px;
+margin-bottom: 25px;
+}
+
+.classes .class-sidebar .sidebar-classes .class-inner:last-of-type {
+margin-bottom: 12px;
+}
+
+.classes .class-sidebar .sidebar-classes .class-image {
+position: absolute;
+top: 0;
+left: 0;
+width: 90px;
+}
+
+.classes .class-sidebar .sidebar-classes .class-info h5 a {
+display: inline-block;
+font-size: 15px;
+letter-spacing: .3px;
+text-transform: capitalize;
+color: #777;
+font-weight: 600;
+margin: 0 0 4px;
+}
+
+.classes .class-sidebar .sidebar-classes .class-info h5 a:hover {
+color: #7b6cd5;
+}
+
+.classes .class-sidebar .sidebar-classes .class-info p {
+font-size: 14px;
+letter-spacing: .3px;
+color: #999;
+font-weight: 500;
+margin: 0;
+}
+
+.classes .class-sidebar .sidebar-tags {
+padding: 35px 20px;
+margin-bottom: 30px;
+box-shadow: 0 0 20px 0 rgba(0, 0, 0, .05);
+}
+
+.classes .class-sidebar .sidebar-tags h4 {
+font-size: 20px;
+letter-spacing: .3px;
+text-transform: capitalize;
+color: #666;
+font-weight: 600;
+margin-bottom: 25px;
+}
+
+.classes .class-sidebar .tags-list {
+margin-bottom: 0;
+}
+
+.classes .class-sidebar .tags-list li {
+display: inline-block;
+}
+
+.classes .class-sidebar .tags-list li a {
+display: inline-block;
+color: #888;
+font-size: 15px;
+letter-spacing: .3px;
+margin-bottom: 5px;
+margin-right: 10px;
+}
+
+.classes .class-sidebar .tags-list li a:hover {
+color: #7b6cd5;
+}
+
 /* --------------------------------------
    6. Home
 -----------------------------------------*/

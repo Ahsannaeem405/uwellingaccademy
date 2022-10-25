@@ -386,6 +386,14 @@ Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallba
 
     Route::view('terms_condition', 'terms_condition');
     Route::view('privacy_policy', 'privacy_policy');
+    Route::view('aboutUs', 'aboutUs');
+    Route::view('services', 'services');
+    Route::view('schedule', 'schedule');
+    Route::view('contact', 'contact');
+    Route::view('blogs', 'blogs');
+    Route::view('class-detail', 'class-detail');
+    Route::view('class-grid', 'class-grid');  
+    Route::view('teacher', 'teacher');  
 
     Route::get('detail/faq/{id}','HelpController@faqstudentpage')->name('faq.detail');
     Route::get('faqinstructor/detail/{id}','HelpController@faqinstructorpage')->name('faqinstructor.detail');

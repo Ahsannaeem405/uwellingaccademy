@@ -194,28 +194,35 @@
                                     <a href="#">HOME</a>
                                 </li>
                                 <li>
-                                    <a href="#">ABOUT US</a>
+                                    <a href="aboutUs">ABOUT US</a>
                                 </li>
                                 
-                                <li><a href="#">SERVICES</a>
+                                <li><a href="services">SERVICES</a>
                                 </li>
                                 <li><a href="#">COURSES AND COACHING<i class="fa fa-angle-down"></i></a>
                                     <ul class="dropdown">
-                                        <li><a href="#">Class Schedule</a></li>
-                                        <li><a href="#">Class Grid</a></li>
-                                        <li><a href="#">Single Class</a></li>
+                                        <li><a href="schedule">Class Schedule</a></li>
+                                        <li><a href="class-grid">Class Grid</a></li>
+                                        <li><a href="class-detail">Single Class</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#">CLASSES<i class="fa fa-angle-down"></i></a>
                                     <ul class="dropdown">
                                         <li><a href="#">CLASSES List</a></li>
-                                        <li><a href="#">Teacher Profile</a></li>
+                                        <li><a href="teacher">Teacher Profile</a></li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <a href="#">Blog</a>
+                                <li><a href="#">Blogs<i class="fa fa-angle-down"></i></a>
+                                    <ul class="dropdown">
+                                        <li><a href="#">Blog 2 Column</a></li>
+                                        <li><a href="#">Blog Sidebar</a></li>
+                                        <li><a href="#">Blog Single</a></li>
+                                    </ul>
                                 </li>
-                                <li><a href="#">Contact Us</a></li>
+                                <!-- <li>
+                                    <a href="#">Blog</a>
+                                </li> -->
+                                <li><a href="contact">Contact Us</a></li>
                             </ul>
                         </div>
                     </nav>
