@@ -5,7 +5,7 @@
 .header-inner .menu-toggle,
 .header-inner .search-form .search-btn,
 .header-inner .navbar .nav li a:before,
-.side-menu .social-icons li a:hover,
+.side-menu .social-icons li a i:hover,
 .home.demo2,
 .services .service .service-bg,
 .about-us .about-info .progress-container .progress-bar,
@@ -40,7 +40,7 @@
 .events .event .event-content .event-title h4:hover,
 .events .event .event-content .event-info li i:before,
 .events .event .event-content .event-more,
-.team .member .member-info span,
+.team .member .member-info a,
 .pricing .pricing-plans .pricing-plan .pricing-price p,
 .pricing .pricing-plans .pricing-plan .main-btn span,
 .testimonials .testimonial-box .description .star i,
@@ -98,10 +98,10 @@
 
 .side-menu .side-menu-close,
 .side-menu .social-icons li a {
-    border: 1px solid #3482fd;
+    /* border: 1px solid #3482fd; */
 }
 
-.side-menu .side-menu-close:hover {
+.side-menu .side-menu-close i:hover {
  	background: linear-gradient(-45deg, #cf11da 0%, #3482fd 100%);
     border: 1px solid #3482fd;
 }

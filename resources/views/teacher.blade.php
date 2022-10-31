@@ -39,13 +39,13 @@
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
                                     <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="teacher-one.html"><i class="fa fa-info-circle"></i></a>
+                                    <a href="teacherOne"><i class="fa fa-info-circle"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="member-info">
                             <h4 class="member-name">ALESSANDRO DI SALVO</h4>
-                            <span>FISIOTERAPISTA & OSTEOPATA</span>
+                            <a href="teacherOne">FISIOTERAPISTA & OSTEOPATA</a>
                         </div>
                     </div>
                 </div>
@@ -58,13 +58,13 @@
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
                                     <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="teacher-two.html"><i class="fa fa-info-circle"></i></a>
+                                    <a href="teacherTwo"><i class="fa fa-info-circle"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="member-info">
                             <h4 class="member-name">RICCARDO PITARRESI</h4>
-                            <span>DIETISTA</span>
+                            <a href="teacherTwo">DIETISTA</a>
                         </div>
                     </div>
                 </div>
@@ -77,13 +77,13 @@
                                     <a href="#"><i class="fa fa-facebook"></i></a>
                                     <a href="#"><i class="fa fa-twitter"></i></a>
                                     <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="teacher-three.html"><i class="fa fa-info-circle"></i></a>
+                                    <a href="teacherThree"><i class="fa fa-info-circle"></i></a>
                                 </div>
                             </div>
                         </div>
                         <div class="member-info">
                             <h4 class="member-name">LOU TRAPANI</h4>
-                            <span>MENTAL COACH</span>
+                            <a href="teacherThree">MENTAL COACH</a>
                         </div>
                     </div>
                 </div>

@@ -394,6 +394,9 @@ Route::get('auth/{provider}/callback', 'Auth\AuthController@handleProviderCallba
     Route::view('class-detail', 'class-detail');
     Route::view('class-grid', 'class-grid');  
     Route::view('teacher', 'teacher');  
+    Route::view('teacherOne', 'teacherOne');  
+    Route::view('teacherTwo', 'teacherTwo');  
+    Route::view('teacherThree', 'teacherThree');  
 
     Route::get('detail/faq/{id}','HelpController@faqstudentpage')->name('faq.detail');
     Route::get('faqinstructor/detail/{id}','HelpController@faqinstructorpage')->name('faqinstructor.detail');

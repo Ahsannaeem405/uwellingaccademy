@@ -16,6 +16,10 @@
 <link rel="stylesheet" href="{{ url('vendor/navigation/menumaker.css') }}" /> <!-- navigation css -->
 <link rel="stylesheet" href="{{ url('vendor/owl/css/owl.carousel.min.css') }}" /> <!-- owl carousel css -->
 <link rel="stylesheet" href="{{ url('vendor/protip/protip.css') }}" /> <!-- menu css -->
+<!-- -------------- -->
+<link href="{{ url('css/theme_color_2.css') }}" rel="stylesheet" type="text/css"/> <!-- custom css -->
+<link href="{{ url('css/animate.min.css') }}" rel="stylesheet" type="text/css"/> <!-- custom css -->
+<!-- -------------- -->
 
 <?php
 $language = Session::get('changed_language'); //or 'english' //set the system language
@@ -26,7 +30,6 @@ $rtl = array('ar','he','ur', 'arc', 'az', 'dv', 'ku'); //make a list of rtl lang
 @else
 
 <link href="{{ url('css/style.css') }}" rel="stylesheet" type="text/css"/> <!-- custom css -->
-<link href="{{ url('css/theme_color_2.css') }}" rel="stylesheet" type="text/css"/> <!-- custom css -->
 @endif
 <link rel="stylesheet" href="{{ url('css/colorbox.css') }}">
 <link rel="stylesheet" href="{{url('admin/bower_components/font-awesome/css/font-awesome.min.css')}}"><!-- fontawesome css -->

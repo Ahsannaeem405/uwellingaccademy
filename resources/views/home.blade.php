@@ -62,8 +62,8 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
             <div class="col-md-7">
                 <div class="home-video">
                     <video width="700" height="auto" controls autoplay loop>
-                        <source src="images/video.mp4" type="video/mp4">
-                        <source src="images/video.ogg" type="video/ogg">
+                        <source src="images/custom/video.mp4" type="video/mp4">
+                        <source src="images/custom/video.ogg" type="video/ogg">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -611,7 +611,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
                     </div>
                     <div class="member-info">
                         <h4 class="member-name">ALESSANDRO DI SALVO</h4>
-                        <span>FISIOTERAPISTA & OSTEOPATA</span>
+                        <a href="teacherOne">FISIOTERAPISTA & OSTEOPATA</a>
                     </div>
                 </div>
             </div>
@@ -630,7 +630,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
                     </div>
                     <div class="member-info">
                         <h4 class="member-name">RICCARDO PITARRESI</h4>
-                        <span>DIETISTA</span>
+                        <a href="teacherTwo">DIETISTA</a>
                     </div>
                 </div>
             </div>
@@ -649,7 +649,7 @@ $sliders = App\Slider::orderBy('position', 'ASC')->get();
                     </div>
                     <div class="member-info">
                         <h4 class="member-name">LOU TRAPANI</h4>
-                        <span>MENTAL COACH</span>
+                        <a href="teacherThree">MENTAL COACH</a>
                     </div>
                 </div>
             </div>
@@ -968,6 +968,7 @@ $('.owl-carousel').owlCarousel({
         }
     }
 });
+
 </script>
 
 @endsection

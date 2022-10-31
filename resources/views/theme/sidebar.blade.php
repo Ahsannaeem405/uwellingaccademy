@@ -16,11 +16,11 @@
         @endif
     </div>
     <ul class="side-nav list-unstyled">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#services" class="">Services</a></li>
-        <li><a href="#class-schedule">Schedule</a></li>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#contact">Contact Us</a></li>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="services" class="">Services</a></li>
+        <li><a href="schedule">Schedule</a></li>
+        <li><a href="aboutUs">About Us</a></li>
+        <li><a href="contact">Contact Us</a></li>
     </ul>
     <div class="side-info">
         <h4>About UwellingAcademy</h4>

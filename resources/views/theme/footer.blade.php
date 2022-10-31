@@ -166,4 +166,8 @@
     <!-- ========== End Scroll To Top  ========== -->
 </footer>
 
+<script>
+    
+</script>
+
 @include('instructormodel')
